@@ -1,0 +1,19 @@
+# action.yml
+name: 'sf-package-version-update-action'
+description: 'auto version increment sfdx-project json file'
+inputs:
+  ANCESTOR_ID: # id of input
+    description: 'Id of ancestor package'
+    required: false
+  PACKAGE_NAME: # id of input
+    description: 'Package name'
+    required: false
+outputs:
+  SFDX_PROJECT: # id of output
+    description: 'The sfdx-project.json file'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.ANCESTOR_ID }}
+    - ${{ inputs.PACKAGE_NAME }}

@@ -1,0 +1,19 @@
+{
+  "name": "sf-package-version-update-action",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Eyvit/sf-package-version-update-action.git"
+  },
+  "version": "1.0.5",
+  "description": "Template for new GitHub Actions running NodeJS",
+  "dependencies": {
+    "@actions/core": "^1.2.4",
+    "@actions/github": "^3.0.0",
+    "loglevel": "^1.6.1",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.4"
+  },
+  "devDependencies": {
+    "standard": "^12.0.1"
+  }
+}

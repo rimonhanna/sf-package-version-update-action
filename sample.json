@@ -1,0 +1,23 @@
+{
+    "packageDirectories": [
+        {
+            "path": "force-app",
+            "default": true,
+            "package": "test",
+            "versionName": "ver 0.4.0",
+            "versionNumber": "0.4.0.NEXT",
+            "ancestorVersion": "0.3.0",
+            "dependencies": [
+                {
+                    "package": "HealthCloud@224.4.0"
+                }
+            ]
+        }
+    ],
+    "namespace": "test",
+    "sfdcLoginUrl": "https://login.salesforce.com",
+    "sourceApiVersion": "48.0",
+    "packageAliases": {
+        "test": ""
+    }
+}
