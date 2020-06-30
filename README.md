@@ -7,5 +7,5 @@ The action is based on [this]( https://github.com/bitoiu/node-js-action-template
 ## example usage
 ```yaml
       - name: manifest Version
-        uses: eyvit/sf-package-version-update-action@master
+        uses: rimonhanna/sf-package-version-update-action@master
 ```

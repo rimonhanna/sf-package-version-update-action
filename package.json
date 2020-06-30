@@ -2,9 +2,9 @@
   "name": "sf-package-version-update-action",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Eyvit/sf-package-version-update-action.git"
+    "url": "https://github.com/rimonhanna/sf-package-version-update-action.git"
   },
-  "version": "1.0.5",
+  "version": "1.0.1",
   "description": "Template for new GitHub Actions running NodeJS",
   "dependencies": {
     "@actions/core": "^1.2.4",
