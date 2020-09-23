@@ -6,11 +6,6 @@ const core = require('@actions/core');
 // Set default log level or read the environment setting
 log.setLevel(process.env.LOG_LEVEL || 'info')
 
-const ancestorId = core.getInput('ANCESTOR_ID', { required: false });
-if (ancestorId == undefined || ancestorId.length == 0 || !ancestorId.startsWith('04t')){
-    log.info("ANCESTOR_ID is missing")
-    process.exit(0)
-}
 const packageName = core.getInput('PACKAGE_NAME', { required: false });
 if (packageName == undefined || packageName.length == 0){
     log.info("PACKAGE_NAME is missing")
@@ -35,7 +30,11 @@ file.packageDirectories.forEach(packageDirectory => {
 
     packageDirectory.versionName = versionName
     packageDirectory.versionNumber = versionNumber
-    packageDirectory.ancestorId = ancestorId
+    
+    const ancestorId = core.getInput('ANCESTOR_ID', { required: false });
+    if (ancestorId != undefined && ancestorId.length != 0 && ancestorId.startsWith('04t')){
+        packageDirectory.ancestorId = ancestorId
+    }
 
     log.info("incremented values")
     log.info(packageDirectory)
