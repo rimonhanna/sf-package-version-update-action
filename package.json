@@ -7,7 +7,7 @@
   "version": "1.0.4",
   "description": "Template for new GitHub Actions running NodeJS",
   "dependencies": {
-    "@actions/core": "^1.2.4",
+    "@actions/core": "^1.2.6",
     "@actions/github": "^3.0.0",
     "loglevel": "^1.6.1",
     "request": "^2.88.2",
