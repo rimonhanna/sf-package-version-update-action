@@ -12,8 +12,8 @@ outputs:
   SFDX_PROJECT: # id of output
     description: 'The sfdx-project.json file'
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: 'node12'
+  main: 'action.js'
   args:
     - ${{ inputs.ANCESTOR_ID }}
     - ${{ inputs.PACKAGE_NAME }}
