@@ -14,6 +14,3 @@ outputs:
 runs:
   using: 'node12'
   main: 'action.js'
-  args:
-    - ${{ inputs.ANCESTOR_ID }}
-    - ${{ inputs.PACKAGE_NAME }}
