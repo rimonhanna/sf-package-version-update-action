@@ -43,10 +43,12 @@ jobs:
 
     - name: Upload release notes
       if: steps.version_bump_and_create_tag.outputs.TAG
-      uses: Roang-zero1/github-create-release-action@master
+      uses: actions/create-release@v1
       with:
-        created_tag: ${{ steps.version_bump_and_create_tag.outputs.TAG }}
-        release_title: ${{ steps.version_bump_and_create_tag.outputs.TAG }}
-        update_existing: true
+        tag_name: ${{ steps.version_bump_and_create_tag.outputs.TAG }}
+        release_name: ${{ steps.version_bump_and_create_tag.outputs.TAG }}
+        draft: false
+        prerelease: false
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
