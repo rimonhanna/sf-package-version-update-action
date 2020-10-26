@@ -34,6 +34,8 @@ file.packageDirectories.forEach(packageDirectory => {
     const ancestorId = core.getInput('ANCESTOR_ID', { required: false });
     if (ancestorId != undefined && ancestorId.length != 0 && ancestorId.startsWith('04t')){
         packageDirectory.ancestorId = ancestorId
+    } else {
+        delete packageDirectory.ancestorId;
     }
 
     log.info("incremented values")
