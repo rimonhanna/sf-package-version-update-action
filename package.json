@@ -4,7 +4,7 @@
     "type": "git",
     "url": "https://github.com/rimonhanna/sf-package-version-update-action.git"
   },
-  "version": "1.0.20",
+  "version": "1.0.21",
   "description": "Template for new GitHub Actions running NodeJS",
   "dependencies": {
     "@actions/core": "^1.9.1",
