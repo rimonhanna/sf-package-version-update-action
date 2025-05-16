@@ -18,7 +18,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
 
     - name: Get npm cache directory
       id: npm_cache
@@ -26,7 +26,7 @@ jobs:
           echo ::set-output name=dir::$(npm config get cache)
           echo $dir
 
-    - uses: actions/cache@v2
+    - uses: actions/cache@v4
       with:
           path: ./node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
